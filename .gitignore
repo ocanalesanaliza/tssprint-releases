@@ -1,0 +1,20 @@
+# Los ejecutables se adjuntan a GitHub Releases y no al historial Git.
+release-assets/
+*.exe
+*.zip
+
+# Nunca publicar secretos o material privado.
+*.key
+*.pem
+*.pfx
+*.p12
+.env
+license.json
+credentials*.json
+*token*
+
+# Archivos locales.
+.DS_Store
+Thumbs.db
+desktop.ini
+
