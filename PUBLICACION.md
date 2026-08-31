@@ -8,20 +8,20 @@ Desde esta carpeta:
 
 ```powershell
 git init -b main
-git add README.md RELEASE_NOTES_v1.0.5.md PUBLICACION.md .gitignore
+git add README.md RELEASE_NOTES_v1.0.6.md PUBLICACION.md .gitignore
 git commit -m "Preparar canal de releases de TSSPrintMaster"
 git remote add origin https://github.com/ocanalesanaliza/tssprint-releases.git
 git push -u origin main
 ```
 
-## Crear el Release v1.0.5
+## Crear el Release v1.0.6
 
 Los binarios de `release-assets/` están ignorados por Git y deben cargarse como recursos del Release, no mediante `git add`.
 
 Con GitHub CLI instalado y autenticado:
 
 ```powershell
-gh release create v1.0.5 ".\release-assets\v1.0.5\Instalar-TSSPrintMaster-1.0.5.exe" ".\release-assets\v1.0.5\TSSPrintMaster-1.0.5-win-x64.zip" ".\release-assets\v1.0.5\tssprint-update.json" ".\release-assets\v1.0.5\SHA256SUMS.txt" --repo "ocanalesanaliza/tssprint-releases" --title "TSSPrintMaster 1.0.5" --notes-file ".\RELEASE_NOTES_v1.0.5.md" --latest
+gh release create v1.0.6 ".\release-assets\v1.0.6\Instalar-TSSPrintMaster-1.0.6.exe" ".\release-assets\v1.0.6\TSSPrintMaster-1.0.6-win-x64.zip" ".\release-assets\v1.0.6\tssprint-update.json" ".\release-assets\v1.0.6\SHA256SUMS.txt" --repo "ocanalesanaliza/tssprint-releases" --title "TSSPrintMaster 1.0.6" --notes-file ".\RELEASE_NOTES_v1.0.6.md" --latest
 ```
 
 Antes de confirmar la publicación, verifique que el Release no esté marcado como borrador ni prerelease. El actualizador utiliza la ruta pública `releases/latest/download`.
