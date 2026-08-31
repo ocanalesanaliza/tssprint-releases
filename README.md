@@ -80,10 +80,15 @@ Get-Content "C:\ProgramData\TSSPrintMaster\Logs\updater.log" -Tail 50
 
 Para soporte, informe la versión, sucursal, nombre del equipo y mensajes de error. No adjunte claves de activación ni archivos de licencia.
 
+## Desinstalación
+
+Abra **Configuración > Aplicaciones > Aplicaciones instaladas** o **Panel de control > Programas y características**, seleccione `TSSPrintMaster` y pulse **Desinstalar**.
+
+La licencia y los registros locales se conservan por defecto para facilitar una reinstalación. La ventana del desinstalador incluye una opción para eliminarlos también.
+
 ## Seguridad
 
 - Las licencias se firman digitalmente y se validan localmente.
 - El servicio usa un certificado final exclusivo para `localhost` con `CA=false`.
 - Los paquetes de actualización se verifican mediante SHA-256.
 - Este repositorio no debe contener claves privadas, licencias o tokens de acceso.
-
